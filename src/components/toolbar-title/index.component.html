@@ -1,0 +1,33 @@
+<div
+  class="title tool-title dark-primary dark-border-color"
+  *ngIf="dataSource && dataSource.title"
+>
+  <span class="cursor-pointer" (click)="onCollapse.emit()">
+    <i
+      class="iconfont iconjiantouarrow483 down-arrow"
+      [class.active]="dataSource.collapsed"
+    >
+    </i>
+
+    <span style="margin-left: 10px; align-self: center; vertical-align: middle">
+      {{ dataSource.title }} x {{ dataSource.nav.length }}
+    </span>
+    <i
+      nz-icon
+      nzType="edit"
+      class="edit-icon"
+      *ngIf="isLogin"
+      (click)="handleEditName($event, dataSource)"
+    ></i>
+  </span>
+
+  <i
+    *ngIf="isLogin || settings.allowCollect"
+    nz-icon
+    nzType="plus"
+    nzTheme="outline"
+    class="add-icon"
+    (click)="openCreateWebModal()"
+  >
+  </i>
+</div>

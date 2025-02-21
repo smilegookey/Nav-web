@@ -1,0 +1,29 @@
+.desc {
+  width: 300px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+#file2 {
+  position: relative;
+  cursor: pointer;
+  .file-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+.tip2 {
+  color: #f50;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.admin {
+  ::ng-deep .ant-table {
+    max-height: 600px;
+    overflow: auto;
+  }
+}
